@@ -3,7 +3,7 @@ export const buttonStyles = {
   color: "#ffffff",
   textTransform: "none",
   borderRadius: "2rem",
-  padding: ".5rem 2rem",
+  padding: ".75rem 2rem",
   ":hover": {
     background: "#3671E9",
   },

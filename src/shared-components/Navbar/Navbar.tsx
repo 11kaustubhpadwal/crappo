@@ -17,10 +17,10 @@ const Navbar = () => {
           {item.name}
         </Grid>
       ))}
-      <Grid item pl={6} pr={2} sx={loginLinkStyles}>
+      <Grid item pl={6} pr={3} sx={loginLinkStyles}>
         Login
       </Grid>
-      <Grid item>
+      <Grid item pl={1}>
         <Button sx={buttonStyles}>Register</Button>
       </Grid>
     </Grid>
