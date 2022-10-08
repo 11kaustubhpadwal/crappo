@@ -13,8 +13,8 @@ const Why = () => {
         <Box sx={{ fontSize: 40, fontWeight: 700 }} mb={5}>
           CRAPPO
         </Box>
-        <Box mb={1}>Experience the next generation cryptocurrency</Box>
-        <Box mb={1}>platform. No financial borders, extra fees, and fake</Box>
+        <Box mb={1.5}>Experience the next generation cryptocurrency</Box>
+        <Box mb={1.5}>platform. No financial borders, extra fees, and fake</Box>
         <Box mb={5}>reviews.</Box>
         <Button sx={learnButtonStyle}>Learn More</Button>
       </Grid>

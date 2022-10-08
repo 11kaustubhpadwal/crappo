@@ -16,11 +16,3 @@ export const salePromoTextStyle = {
   color: "#ffffff",
   padding: ".5rem 0.8rem .5rem 1rem",
 };
-
-export const trialButtonStyle = {
-  textTransform: "none",
-  color: "#ffffff",
-  background: "#3671E9",
-  borderRadius: "2rem",
-  ":hover": { background: "#3671E9" },
-};

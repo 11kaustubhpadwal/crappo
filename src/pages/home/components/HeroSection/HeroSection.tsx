@@ -1,12 +1,8 @@
 import { Box, Button, Grid } from "@mui/material";
 import arrowRight from "../../../../assets/Arrow-Right.svg";
 import illustration from "../../../../assets/Illustration.svg";
-import {
-  saleOfferWrapper,
-  salePromoTextStyle,
-  saleValueStyle,
-  trialButtonStyle,
-} from "./styles";
+import { iconButtonStyle } from "../../styled";
+import { saleOfferWrapper, salePromoTextStyle, saleValueStyle } from "./styles";
 
 const ButtonIcon = () => (
   <img
@@ -38,10 +34,12 @@ const HeroSection = () => {
             <Box>in crypto</Box>
           </Box>
           <Box sx={{ color: "#E0E0E0", lineHeight: "1.75rem" }} mb={4} mt={4}>
-            <Box>Buy and sell cryptocurrencies, trusted by 10M wallets</Box>
+            <Box mb={0.25}>
+              Buy and sell cryptocurrencies, trusted by 10M wallets
+            </Box>
             <Box>with over $30 billion in transactions.</Box>
           </Box>
-          <Button sx={trialButtonStyle}>
+          <Button sx={iconButtonStyle}>
             <Grid
               container
               alignItems="center"
