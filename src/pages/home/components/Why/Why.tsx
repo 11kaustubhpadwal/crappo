@@ -4,11 +4,11 @@ import { learnButtonStyle, whyWrapper } from "./styles";
 
 const Why = () => {
   return (
-    <Grid container sx={whyWrapper} gap={7}>
+    <Grid container sx={whyWrapper} gap={3}>
       <Grid item>
         <img src={illustrations} alt="why-illustrations" />
       </Grid>
-      <Grid item>
+      <Grid item sx={{ marginLeft: "auto" }}>
         <Box sx={{ fontSize: 40, fontWeight: 700 }}>Why you should choose</Box>
         <Box sx={{ fontSize: 40, fontWeight: 700 }} mb={5}>
           CRAPPO
