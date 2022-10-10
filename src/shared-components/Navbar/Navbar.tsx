@@ -1,7 +1,12 @@
 import { Button, Grid } from "@mui/material";
 import logo from "../../assets/Logo.svg";
 import { navbarItems } from "./constants";
-import { buttonStyles, loginLinkStyles, navbarWrapperStyles } from "./styles";
+import {
+  buttonStyles,
+  loginLinkStyles,
+  navbarWrapperStyles,
+  navLinkItemStyle,
+} from "./styles";
 
 const Navbar = () => {
   return (
@@ -13,7 +18,12 @@ const Navbar = () => {
         CRAPPO
       </Grid>
       {navbarItems.map((item, index) => (
-        <Grid item key={`navbar-link-item-${index}`} pr={2}>
+        <Grid
+          item
+          key={`navbar-link-item-${index}`}
+          mr={2}
+          sx={navLinkItemStyle}
+        >
           {item.name}
         </Grid>
       ))}

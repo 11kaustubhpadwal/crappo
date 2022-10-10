@@ -16,6 +16,7 @@ export const cardActiveStyle = {
   borderRadius: "1.5rem",
   padding: "2.5rem",
   color: "#ffffff",
+  transition: ".3s",
 };
 
 export const cardAbbreviationStyle = {
@@ -29,4 +30,5 @@ export const cardInactiveStyle = {
   background: "#ffffff",
   borderRadius: "1.5rem",
   padding: "2.5rem",
+  transition: ".3s",
 };

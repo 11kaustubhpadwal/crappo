@@ -1,4 +1,5 @@
 import { Box, Button, Grid, IconButton } from "@mui/material";
+import { useState } from "react";
 import arrowButton from "../../../../assets/arrow-button.svg";
 import arrowRight from "../../../../assets/Arrow-Right.svg";
 import bitcoin from "../../../../assets/bitcoin.svg";
@@ -30,14 +31,46 @@ const IconButtonArrowIcon = () => (
 );
 
 const CryptoCurrencies = () => {
+  const [isSelected, setIsSelected] = useState("1");
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    setIsSelected(e.currentTarget.id);
+  };
+
+  const getCardStyle = (cardId: string) => {
+    return isSelected === cardId ? cardActiveStyle : cardInactiveStyle;
+  };
+
+  const getCardButtonStyle = (cardId: string) => {
+    return isSelected === cardId ? (
+      <Button sx={iconButtonStyle}>
+        <Grid
+          container
+          alignItems="center"
+          gap={2}
+          sx={{ padding: ".5rem 1rem" }}
+        >
+          <Grid item>Start mining</Grid>
+          <Grid item>
+            <ButtonIcon />
+          </Grid>
+        </Grid>
+      </Button>
+    ) : (
+      <IconButton sx={{ ":hover": {}, padding: "0" }}>
+        <IconButtonArrowIcon />
+      </IconButton>
+    );
+  };
+
   return (
     <Box sx={sectionWrapperStyle}>
       <Box sx={sectionHeadingStyle} mb={13}>
         Trade securely and market the high growth cryptocurrencies.
       </Box>
       <Grid container textAlign="center" sx={{ padding: "0 6rem" }} gap={6}>
-        <Grid item sm>
-          <Box sx={cardActiveStyle}>
+        <Grid item sm sx={{ cursor: "pointer" }}>
+          <Box sx={getCardStyle("1")} onClick={handleClick} id="1">
             <img src={bitcoin} alt="bitcoin" />
             <Grid container justifyContent="center" mt={6} gap={1}>
               <Grid item sx={{ fontSize: 32, fontWeight: 700 }}>
@@ -50,23 +83,11 @@ const CryptoCurrencies = () => {
             <Box mt={4} mb={4} sx={{ lineHeight: "1.8rem" }}>
               Digital currency in which a record of transactions is maintained.
             </Box>
-            <Button sx={iconButtonStyle}>
-              <Grid
-                container
-                alignItems="center"
-                gap={2}
-                sx={{ padding: ".5rem 1rem" }}
-              >
-                <Grid item>Start mining</Grid>
-                <Grid item>
-                  <ButtonIcon />
-                </Grid>
-              </Grid>
-            </Button>
+            {getCardButtonStyle("1")}
           </Box>
         </Grid>
-        <Grid item sm>
-          <Box sx={cardInactiveStyle}>
+        <Grid item sm sx={{ cursor: "pointer" }}>
+          <Box sx={getCardStyle("2")} onClick={handleClick} id="2">
             <img src={ethereum} alt="ethereum" />
             <Grid container justifyContent="center" mt={6} gap={1}>
               <Grid item sx={{ fontSize: 32, fontWeight: 700 }}>
@@ -80,13 +101,11 @@ const CryptoCurrencies = () => {
               Blockchain technology to create and run decentralized digital
               applications.
             </Box>
-            <IconButton>
-              <IconButtonArrowIcon />
-            </IconButton>
+            {getCardButtonStyle("2")}
           </Box>
         </Grid>
-        <Grid item sm>
-          <Box sx={cardInactiveStyle}>
+        <Grid item sm sx={{ cursor: "pointer" }}>
+          <Box sx={getCardStyle("3")} onClick={handleClick} id="3">
             <img src={litecoin} alt="litecoin" />
             <Grid container justifyContent="center" mt={6} gap={1}>
               <Grid item sx={{ fontSize: 32, fontWeight: 700 }}>
@@ -100,9 +119,7 @@ const CryptoCurrencies = () => {
               Cryptocurrency that enables instant payments to anyone in the
               world.
             </Box>
-            <IconButton>
-              <IconButtonArrowIcon />
-            </IconButton>
+            {getCardButtonStyle("3")}
           </Box>
         </Grid>
       </Grid>

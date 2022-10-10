@@ -6,6 +6,8 @@ export const learnButtonStyle = {
   padding: ".7rem 1.5rem",
   ":hover": {
     background: "#3671E9",
+    transform: "scale(1.05)",
+    transition: ".5s",
   },
 };
 

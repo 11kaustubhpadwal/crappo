@@ -9,7 +9,12 @@ import twitter from "../../assets/twitter.svg";
 import visa from "../../assets/Visa.svg";
 import youtube from "../../assets/youtube.svg";
 import { quickLinkItems, resourcesItems } from "./constants";
-import { footerWrapper } from "./styles";
+import {
+  cardPaymentsIconsStyle,
+  footerLinkStyle,
+  footerWrapper,
+  socialIconsStyle,
+} from "./styles";
 
 const Footer = () => {
   return (
@@ -31,7 +36,11 @@ const Footer = () => {
           </Box>
           <Box>
             {quickLinkItems.map((item, index) => (
-              <Box key={`footer-quick-link-item-${index}`} mb={2}>
+              <Box
+                key={`footer-quick-link-item-${index}`}
+                mb={2}
+                sx={footerLinkStyle}
+              >
                 {item.name}
               </Box>
             ))}
@@ -43,7 +52,11 @@ const Footer = () => {
           </Box>
           <Box>
             {resourcesItems.map((item, index) => (
-              <Box key={`footer-resources-link-item-${index}`} mb={2}>
+              <Box
+                key={`footer-resources-link-item-${index}`}
+                mb={2}
+                sx={footerLinkStyle}
+              >
                 {item.name}
               </Box>
             ))}
@@ -54,13 +67,13 @@ const Footer = () => {
             We accept following payment systems
           </Box>
           <Grid container gap={3}>
-            <Grid item>
+            <Grid item sx={cardPaymentsIconsStyle}>
               <img src={visa} alt="visa" />
             </Grid>
-            <Grid item>
+            <Grid item sx={cardPaymentsIconsStyle}>
               <img src={mastercard} alt="mastercard" />
             </Grid>
-            <Grid item>
+            <Grid item sx={cardPaymentsIconsStyle}>
               <img src={bitcoinCurrency} alt="bitcoin-currency" />
             </Grid>
           </Grid>
@@ -72,19 +85,19 @@ const Footer = () => {
         </Grid>
         <Grid item>
           <Grid container gap={4}>
-            <Grid item>
+            <Grid item sx={socialIconsStyle}>
               <img src={facebook} alt="facebook" />
             </Grid>
-            <Grid item>
+            <Grid item sx={socialIconsStyle}>
               <img src={instagram} alt="instagram" />
             </Grid>
-            <Grid item>
+            <Grid item sx={socialIconsStyle}>
               <img src={youtube} alt="youtube" />
             </Grid>
-            <Grid item>
+            <Grid item sx={socialIconsStyle}>
               <img src={twitter} alt="twitter" />
             </Grid>
-            <Grid item>
+            <Grid item sx={socialIconsStyle}>
               <img src={linkedin} alt="linkedin" />
             </Grid>
           </Grid>
