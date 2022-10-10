@@ -26,7 +26,7 @@ const GraphWithText = () => {
           </Box>
           <Button sx={buttonStyles}>Learn More</Button>
         </Grid>
-        <Grid item sm="auto" pr={3} sx={{ marginLeft: "auto" }}>
+        <Grid item sm="auto" pr={3}>
           <Box sx={graphCardWrapper}>
             <Grid container gap={2}>
               <Grid item>

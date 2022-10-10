@@ -15,7 +15,7 @@ const Investments = () => {
         </Box>
         <Button sx={buttonStyles}>Learn More</Button>
       </Grid>
-      <Grid item sm sx={{ marginLeft: "auto" }}>
+      <Grid item sm>
         <img src={table} alt="table" />
       </Grid>
     </Grid>

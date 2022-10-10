@@ -53,7 +53,7 @@ const HeroSection = () => {
             </Grid>
           </Button>
         </Grid>
-        <Grid item sx={{ marginLeft: "auto" }}>
+        <Grid item>
           <img src={illustration} alt="illustration" />
         </Grid>
       </Grid>
