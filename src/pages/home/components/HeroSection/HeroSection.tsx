@@ -16,7 +16,7 @@ const HeroSection = () => {
   return (
     <Box sx={{ background: "#0F054C", padding: "6rem" }}>
       <Grid container>
-        <Grid item>
+        <Grid item sm>
           <Grid container alignItems="center" sx={saleOfferWrapper}>
             <Grid item sx={saleValueStyle}>
               75% SAVE
@@ -53,7 +53,7 @@ const HeroSection = () => {
             </Grid>
           </Button>
         </Grid>
-        <Grid item>
+        <Grid item sm>
           <img src={illustration} alt="illustration" />
         </Grid>
       </Grid>
